@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "IntroLayer.h"
+#import "SimpleAudioEngine.h"
 
 @implementation MyNavigationController
 
@@ -133,7 +134,11 @@
 	// set the Navigation Controller as the root view controller
 	[window_ setRootViewController:navController_];
 	
-	// make main window visible
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"music.caf"];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"music.caf"];
+
+	
+    // make main window visible
 	[window_ makeKeyAndVisible];
 	
 	return YES;

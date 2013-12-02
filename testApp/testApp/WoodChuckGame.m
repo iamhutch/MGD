@@ -9,6 +9,7 @@
 #import "WoodChuckGame.h"
 #import "GameOver.h"
 #import "AppDelegate.h"
+#import "Start.h"
 
 @implementation WoodChuckGame
 
@@ -31,6 +32,7 @@
         
         // SETUP AUDIO, WINDOW SIZE, BACKGROUND
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"crunch.caf"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"hit.caf"];
         winSize = [CCDirector sharedDirector].winSize;
         CCSprite *background;
 		
@@ -63,7 +65,7 @@
         [self schedule:@selector(tick:) interval:1.0f/60.0f];
         
         // ALLOW TOUCHES
-        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
+        [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self
                                                          priority:0
                                                   swallowsTouches:YES];
 
@@ -74,6 +76,7 @@
 // START WOODCHUCK WALKING
 - (void)sendWoodChuck
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:@"running.caf"];
     [_player runAction:[CCMoveTo actionWithDuration:3.0 position:ccp(_wood.position.x-50, 90)]];
 }
 
@@ -98,7 +101,15 @@
 	//[_player stopAllActions];
 	//[_player runAction: [CCMoveTo actionWithDuration:1 position:convertedLocation]];
     
-    [[SimpleAudioEngine sharedEngine] playEffect:@"crunch.caf"];
+    // CHECK IF WOODCHUCK HAS MET UP WITH WOODPILE
+    if (CGRectIntersectsRect(_playerRect, _woodRect))
+    {
+        [[SimpleAudioEngine sharedEngine] playEffect:@"crunch.caf"];
+    }
+    else
+    {
+        [[SimpleAudioEngine sharedEngine] playEffect:@"running.caf"];
+    }
     [_player runAction: [CCMoveBy actionWithDuration:1 position:ccp(10,0)]];
 
 }
@@ -134,20 +145,25 @@
     _woodRect = [self rectWood];
     _tractorRect = [self rectTractor];
     
+    // CHECK IF WOODCHUCK HAS MET UP WITH WOODPILE
     if (CGRectIntersectsRect(_playerRect, _woodRect))
     {
-        CCLOG(@":(");
+        CCLOG(@"Will transition to eating woodchuck animation later.");
     }
     
-    if (CGRectIntersectsRect(_tractorRect, _playerRect))
+    // IF WOODCHUCK IS NOT OFFSCREEN AND TRACTOR INTERSECTS WITH WOODCHUCK,
+    // PLAY GAME OVER SONG AND SHOW GAME OVER SCREEN
+    if ((_player.position.x < winSize.width) && (CGRectIntersectsRect(_tractorRect, _playerRect)))
     {
         [[SimpleAudioEngine sharedEngine] playEffect:@"hit.caf"];
         [[SimpleAudioEngine sharedEngine] setEffectsVolume:0.2f];
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[GameOver node] ]];
     }
     
-    if (CG)
-    
+    // IF WOODCHUCK IS SAFELY OFFSCREEN, TAKE US BACK TO START
+    if (_player.position.x + 50 > winSize.width) {
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[Start node] ]];
+    }
     
 }
 

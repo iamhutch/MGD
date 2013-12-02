@@ -7,7 +7,7 @@
 //
 
 #import "IntroLayer.h"
-#import "WoodChuckGame.h"
+#import "Start.h"
 
 
 @implementation IntroLayer
@@ -52,6 +52,6 @@
 -(void) onEnter
 {
 	[super onEnter];
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[WoodChuckGame scene] ]];
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Start scene] ]];
 }
 @end

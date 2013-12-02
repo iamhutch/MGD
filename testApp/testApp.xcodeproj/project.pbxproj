@@ -150,6 +150,10 @@
 		847CF51F184C43F300758A18 /* crunch.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF51D184C40B800758A18 /* crunch.caf */; };
 		847CF520184C43F300758A18 /* running.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF51E184C431600758A18 /* running.caf */; };
 		847CF522184C474400758A18 /* hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF521184C473C00758A18 /* hit.caf */; };
+		847CF524184D088E00758A18 /* music.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF523184D088500758A18 /* music.caf */; };
+		847CF527184D0BA800758A18 /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF526184D0BA800758A18 /* Start.m */; };
+		847CF529184D0DBC00758A18 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF528184D0DBC00758A18 /* start.png */; };
+		847CF52B184D10B500758A18 /* wood-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF52A184D10B500758A18 /* wood-3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -444,6 +448,11 @@
 		847CF51D184C40B800758A18 /* crunch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = crunch.caf; path = Resources/crunch.caf; sourceTree = "<group>"; };
 		847CF51E184C431600758A18 /* running.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = running.caf; path = Resources/running.caf; sourceTree = "<group>"; };
 		847CF521184C473C00758A18 /* hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hit.caf; path = Resources/hit.caf; sourceTree = "<group>"; };
+		847CF523184D088500758A18 /* music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = music.caf; path = Resources/music.caf; sourceTree = "<group>"; };
+		847CF525184D0BA800758A18 /* Start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Start.h; sourceTree = "<group>"; };
+		847CF526184D0BA800758A18 /* Start.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Start.m; sourceTree = "<group>"; };
+		847CF528184D0DBC00758A18 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start.png; path = Resources/start.png; sourceTree = "<group>"; };
+		847CF52A184D10B500758A18 /* wood-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wood-3.png"; path = "Resources/wood-3.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +524,8 @@
 				847CF4E8184A513100758A18 /* Supporting Files */,
 				847CF51A184C384100758A18 /* GameOver.h */,
 				847CF51B184C384100758A18 /* GameOver.m */,
+				847CF525184D0BA800758A18 /* Start.h */,
+				847CF526184D0BA800758A18 /* Start.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -526,12 +537,15 @@
 				847CF51D184C40B800758A18 /* crunch.caf */,
 				847CF50E184C10A200758A18 /* road.png */,
 				847CF508184C108E00758A18 /* tractor.png */,
+				847CF523184D088500758A18 /* music.caf */,
 				847CF509184C108E00758A18 /* wood.png */,
+				847CF52A184D10B500758A18 /* wood-3.png */,
 				847CF51E184C431600758A18 /* running.caf */,
 				847CF50A184C108E00758A18 /* woodchuck.png */,
 				847CF506184C107E00758A18 /* bg.png */,
 				847CF35D184A512E00758A18 /* Default.png */,
 				847CF35F184A512E00758A18 /* Default@2x.png */,
+				847CF528184D0DBC00758A18 /* start.png */,
 				847CF361184A512E00758A18 /* Default-568h@2x.png */,
 				847CF363184A512E00758A18 /* Default-Landscape~ipad.png */,
 				847CF365184A512E00758A18 /* Icon-72.png */,
@@ -960,6 +974,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847CF524184D088E00758A18 /* music.caf in Resources */,
 				847CF522184C474400758A18 /* hit.caf in Resources */,
 				847CF51F184C43F300758A18 /* crunch.caf in Resources */,
 				847CF520184C43F300758A18 /* running.caf in Resources */,
@@ -970,9 +985,11 @@
 				847CF36A184A512E00758A18 /* Icon-Small.png in Resources */,
 				847CF366184A512E00758A18 /* Icon-72.png in Resources */,
 				847CF35E184A512E00758A18 /* Default.png in Resources */,
+				847CF52B184D10B500758A18 /* wood-3.png in Resources */,
 				847CF50F184C10A200758A18 /* road.png in Resources */,
 				847CF368184A512E00758A18 /* Icon-Small-50.png in Resources */,
 				847CF50D184C108E00758A18 /* woodchuck.png in Resources */,
+				847CF529184D0DBC00758A18 /* start.png in Resources */,
 				847CF50C184C108E00758A18 /* wood.png in Resources */,
 				847CF373184A512E00758A18 /* iTunesArtwork in Resources */,
 				847CF36C184A512E00758A18 /* Icon-Small@2x.png in Resources */,
@@ -1068,6 +1085,7 @@
 				847CF4CA184A513000758A18 /* aabb.c in Sources */,
 				847CF441184A513000758A18 /* CCTMXObjectGroup.m in Sources */,
 				847CF4A3184A513000758A18 /* CDAudioManager.m in Sources */,
+				847CF527184D0BA800758A18 /* Start.m in Sources */,
 				847CF450184A513000758A18 /* CCTransitionProgress.m in Sources */,
 				847CF473184A513000758A18 /* CCGLView.m in Sources */,
 				847CF4A7184A513000758A18 /* CDOpenALSupport.m in Sources */,
