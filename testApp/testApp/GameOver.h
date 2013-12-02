@@ -1,5 +1,5 @@
 //
-//  WoodChuckLayer.h
+//  GameOver.h
 //  testApp
 //
 //  Created by Lucy Hutcheson on 12/1/13.
@@ -9,10 +9,12 @@
 #import "CCLayer.h"
 #import "cocos2d.h"
 
-@interface WoodChuckLayer : CCLayer
+
+@interface GameOver : CCLayer
 {
-    
+    CGSize winSize;
 }
+
 +(CCScene *) scene;
 
 @end

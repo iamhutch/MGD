@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "IntroLayer.h"
-#import "WoodChuckLayer.h"
+#import "WoodChuckGame.h"
 
 
 #pragma mark - IntroLayer
@@ -61,6 +61,6 @@
 -(void) onEnter
 {
 	[super onEnter];
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionMoveInR transitionWithDuration:1.0 scene:[WoodChuckLayer scene] ]];
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[WoodChuckGame scene] ]];
 }
 @end

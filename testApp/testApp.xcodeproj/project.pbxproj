@@ -139,14 +139,17 @@
 		847CF4E6184A513000758A18 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 847CF4E5184A513000758A18 /* vec4.c */; };
 		847CF4EB184A513100758A18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF4EA184A513100758A18 /* main.m */; };
 		847CF4EE184A513100758A18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF4ED184A513100758A18 /* AppDelegate.m */; };
-		847CF4F1184A513100758A18 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF4F0184A513100758A18 /* HelloWorldLayer.m */; };
 		847CF4F4184A513100758A18 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF4F3184A513100758A18 /* IntroLayer.m */; };
 		847CF507184C107E00758A18 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF506184C107E00758A18 /* bg.png */; };
 		847CF50B184C108E00758A18 /* tractor.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF508184C108E00758A18 /* tractor.png */; };
 		847CF50C184C108E00758A18 /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF509184C108E00758A18 /* wood.png */; };
 		847CF50D184C108E00758A18 /* woodchuck.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF50A184C108E00758A18 /* woodchuck.png */; };
 		847CF50F184C10A200758A18 /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF50E184C10A200758A18 /* road.png */; };
-		847CF515184C13AA00758A18 /* WoodChuckLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF514184C13AA00758A18 /* WoodChuckLayer.m */; };
+		847CF515184C13AA00758A18 /* WoodChuckGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF514184C13AA00758A18 /* WoodChuckGame.m */; };
+		847CF51C184C384100758A18 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF51B184C384100758A18 /* GameOver.m */; };
+		847CF51F184C43F300758A18 /* crunch.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF51D184C40B800758A18 /* crunch.caf */; };
+		847CF520184C43F300758A18 /* running.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF51E184C431600758A18 /* running.caf */; };
+		847CF522184C474400758A18 /* hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF521184C473C00758A18 /* hit.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -427,8 +430,6 @@
 		847CF4EA184A513100758A18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		847CF4EC184A513100758A18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		847CF4ED184A513100758A18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		847CF4EF184A513100758A18 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		847CF4F0184A513100758A18 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		847CF4F2184A513100758A18 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		847CF4F3184A513100758A18 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		847CF506184C107E00758A18 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = Resources/bg.png; sourceTree = "<group>"; };
@@ -436,8 +437,13 @@
 		847CF509184C108E00758A18 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wood.png; path = Resources/wood.png; sourceTree = "<group>"; };
 		847CF50A184C108E00758A18 /* woodchuck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = woodchuck.png; path = Resources/woodchuck.png; sourceTree = "<group>"; };
 		847CF50E184C10A200758A18 /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road.png; path = Resources/road.png; sourceTree = "<group>"; };
-		847CF513184C13AA00758A18 /* WoodChuckLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoodChuckLayer.h; sourceTree = "<group>"; };
-		847CF514184C13AA00758A18 /* WoodChuckLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoodChuckLayer.m; sourceTree = "<group>"; };
+		847CF513184C13AA00758A18 /* WoodChuckGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoodChuckGame.h; sourceTree = "<group>"; };
+		847CF514184C13AA00758A18 /* WoodChuckGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoodChuckGame.m; sourceTree = "<group>"; };
+		847CF51A184C384100758A18 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		847CF51B184C384100758A18 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		847CF51D184C40B800758A18 /* crunch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = crunch.caf; path = Resources/crunch.caf; sourceTree = "<group>"; };
+		847CF51E184C431600758A18 /* running.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = running.caf; path = Resources/running.caf; sourceTree = "<group>"; };
+		847CF521184C473C00758A18 /* hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hit.caf; path = Resources/hit.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,15 +506,15 @@
 			children = (
 				847CF4EC184A513100758A18 /* AppDelegate.h */,
 				847CF4ED184A513100758A18 /* AppDelegate.m */,
-				847CF4EF184A513100758A18 /* HelloWorldLayer.h */,
-				847CF4F0184A513100758A18 /* HelloWorldLayer.m */,
 				847CF4F2184A513100758A18 /* IntroLayer.h */,
 				847CF4F3184A513100758A18 /* IntroLayer.m */,
+				847CF513184C13AA00758A18 /* WoodChuckGame.h */,
+				847CF514184C13AA00758A18 /* WoodChuckGame.m */,
 				847CF35C184A512E00758A18 /* Resources */,
 				847CF374184A512E00758A18 /* libs */,
 				847CF4E8184A513100758A18 /* Supporting Files */,
-				847CF513184C13AA00758A18 /* WoodChuckLayer.h */,
-				847CF514184C13AA00758A18 /* WoodChuckLayer.m */,
+				847CF51A184C384100758A18 /* GameOver.h */,
+				847CF51B184C384100758A18 /* GameOver.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -516,9 +522,12 @@
 		847CF35C184A512E00758A18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				847CF521184C473C00758A18 /* hit.caf */,
+				847CF51D184C40B800758A18 /* crunch.caf */,
 				847CF50E184C10A200758A18 /* road.png */,
 				847CF508184C108E00758A18 /* tractor.png */,
 				847CF509184C108E00758A18 /* wood.png */,
+				847CF51E184C431600758A18 /* running.caf */,
 				847CF50A184C108E00758A18 /* woodchuck.png */,
 				847CF506184C107E00758A18 /* bg.png */,
 				847CF35D184A512E00758A18 /* Default.png */,
@@ -951,6 +960,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847CF522184C474400758A18 /* hit.caf in Resources */,
+				847CF51F184C43F300758A18 /* crunch.caf in Resources */,
+				847CF520184C43F300758A18 /* running.caf in Resources */,
 				847CF36E184A512E00758A18 /* Icon.png in Resources */,
 				847CF4CC184A513000758A18 /* ChangeLog in Resources */,
 				847CF360184A512E00758A18 /* Default@2x.png in Resources */,
@@ -1005,6 +1017,7 @@
 				847CF37E184A512E00758A18 /* CCActionCatmullRom.m in Sources */,
 				847CF3F5184A512F00758A18 /* CCParticleSystem.m in Sources */,
 				847CF44A184A513000758A18 /* CCTransition.m in Sources */,
+				847CF51C184C384100758A18 /* GameOver.m in Sources */,
 				847CF3F2184A512F00758A18 /* CCParticleExamples.m in Sources */,
 				847CF3EF184A512F00758A18 /* CCParticleBatchNode.m in Sources */,
 				847CF432184A513000758A18 /* CCTextureAtlas.m in Sources */,
@@ -1020,7 +1033,7 @@
 				847CF486184A513000758A18 /* CCProfiling.m in Sources */,
 				847CF41D184A512F00758A18 /* CCShaderCache.m in Sources */,
 				847CF423184A512F00758A18 /* CCSprite.m in Sources */,
-				847CF515184C13AA00758A18 /* WoodChuckLayer.m in Sources */,
+				847CF515184C13AA00758A18 /* WoodChuckGame.m in Sources */,
 				847CF3CA184A512F00758A18 /* CCGrabber.m in Sources */,
 				847CF4D4184A513000758A18 /* mat3.c in Sources */,
 				847CF4EE184A513100758A18 /* AppDelegate.m in Sources */,
@@ -1072,7 +1085,6 @@
 				847CF4D2184A513000758A18 /* matrix.c in Sources */,
 				847CF3B8184A512F00758A18 /* CCDrawingPrimitives.m in Sources */,
 				847CF420184A512F00758A18 /* ccShaders.m in Sources */,
-				847CF4F1184A513100758A18 /* HelloWorldLayer.m in Sources */,
 				847CF476184A513000758A18 /* CCWindow.m in Sources */,
 				847CF454184A513000758A18 /* cocos2d.m in Sources */,
 				847CF401184A512F00758A18 /* CCProgressTimer.m in Sources */,
