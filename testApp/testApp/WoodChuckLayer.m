@@ -42,7 +42,7 @@
 
         
         CCSprite *player = [CCSprite spriteWithFile:@"woodchuck.png"];
-        player.position = ccp(player.contentSize.width/2, 70);
+        player.position = ccp(player.contentSize.width/2, 90);
         [self addChild:player];
         
 
