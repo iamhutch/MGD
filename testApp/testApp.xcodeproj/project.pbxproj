@@ -141,6 +141,12 @@
 		847CF4EE184A513100758A18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF4ED184A513100758A18 /* AppDelegate.m */; };
 		847CF4F1184A513100758A18 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF4F0184A513100758A18 /* HelloWorldLayer.m */; };
 		847CF4F4184A513100758A18 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF4F3184A513100758A18 /* IntroLayer.m */; };
+		847CF507184C107E00758A18 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF506184C107E00758A18 /* bg.png */; };
+		847CF50B184C108E00758A18 /* tractor.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF508184C108E00758A18 /* tractor.png */; };
+		847CF50C184C108E00758A18 /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF509184C108E00758A18 /* wood.png */; };
+		847CF50D184C108E00758A18 /* woodchuck.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF50A184C108E00758A18 /* woodchuck.png */; };
+		847CF50F184C10A200758A18 /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF50E184C10A200758A18 /* road.png */; };
+		847CF515184C13AA00758A18 /* WoodChuckLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF514184C13AA00758A18 /* WoodChuckLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -425,6 +431,13 @@
 		847CF4F0184A513100758A18 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		847CF4F2184A513100758A18 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		847CF4F3184A513100758A18 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		847CF506184C107E00758A18 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = Resources/bg.png; sourceTree = "<group>"; };
+		847CF508184C108E00758A18 /* tractor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tractor.png; path = Resources/tractor.png; sourceTree = "<group>"; };
+		847CF509184C108E00758A18 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wood.png; path = Resources/wood.png; sourceTree = "<group>"; };
+		847CF50A184C108E00758A18 /* woodchuck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = woodchuck.png; path = Resources/woodchuck.png; sourceTree = "<group>"; };
+		847CF50E184C10A200758A18 /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road.png; path = Resources/road.png; sourceTree = "<group>"; };
+		847CF513184C13AA00758A18 /* WoodChuckLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoodChuckLayer.h; sourceTree = "<group>"; };
+		847CF514184C13AA00758A18 /* WoodChuckLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoodChuckLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +507,8 @@
 				847CF35C184A512E00758A18 /* Resources */,
 				847CF374184A512E00758A18 /* libs */,
 				847CF4E8184A513100758A18 /* Supporting Files */,
+				847CF513184C13AA00758A18 /* WoodChuckLayer.h */,
+				847CF514184C13AA00758A18 /* WoodChuckLayer.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -501,6 +516,11 @@
 		847CF35C184A512E00758A18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				847CF50E184C10A200758A18 /* road.png */,
+				847CF508184C108E00758A18 /* tractor.png */,
+				847CF509184C108E00758A18 /* wood.png */,
+				847CF50A184C108E00758A18 /* woodchuck.png */,
+				847CF506184C107E00758A18 /* bg.png */,
 				847CF35D184A512E00758A18 /* Default.png */,
 				847CF35F184A512E00758A18 /* Default@2x.png */,
 				847CF361184A512E00758A18 /* Default-568h@2x.png */,
@@ -515,7 +535,8 @@
 				847CF372184A512E00758A18 /* iTunesArtwork */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
+			path = "/Users/admin/Documents/Full-Sail/MGD 1312/MGD/testApp/testApp";
+			sourceTree = "<absolute>";
 		};
 		847CF374184A512E00758A18 /* libs */ = {
 			isa = PBXGroup;
@@ -933,15 +954,20 @@
 				847CF36E184A512E00758A18 /* Icon.png in Resources */,
 				847CF4CC184A513000758A18 /* ChangeLog in Resources */,
 				847CF360184A512E00758A18 /* Default@2x.png in Resources */,
+				847CF507184C107E00758A18 /* bg.png in Resources */,
 				847CF36A184A512E00758A18 /* Icon-Small.png in Resources */,
 				847CF366184A512E00758A18 /* Icon-72.png in Resources */,
 				847CF35E184A512E00758A18 /* Default.png in Resources */,
+				847CF50F184C10A200758A18 /* road.png in Resources */,
 				847CF368184A512E00758A18 /* Icon-Small-50.png in Resources */,
+				847CF50D184C108E00758A18 /* woodchuck.png in Resources */,
+				847CF50C184C108E00758A18 /* wood.png in Resources */,
 				847CF373184A512E00758A18 /* iTunesArtwork in Resources */,
 				847CF36C184A512E00758A18 /* Icon-Small@2x.png in Resources */,
 				847CF364184A512E00758A18 /* Default-Landscape~ipad.png in Resources */,
 				847CF362184A512E00758A18 /* Default-568h@2x.png in Resources */,
 				847CF370184A512E00758A18 /* Icon@2x.png in Resources */,
+				847CF50B184C108E00758A18 /* tractor.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,6 +1020,7 @@
 				847CF486184A513000758A18 /* CCProfiling.m in Sources */,
 				847CF41D184A512F00758A18 /* CCShaderCache.m in Sources */,
 				847CF423184A512F00758A18 /* CCSprite.m in Sources */,
+				847CF515184C13AA00758A18 /* WoodChuckLayer.m in Sources */,
 				847CF3CA184A512F00758A18 /* CCGrabber.m in Sources */,
 				847CF4D4184A513000758A18 /* mat3.c in Sources */,
 				847CF4EE184A513100758A18 /* AppDelegate.m in Sources */,
@@ -1169,6 +1196,7 @@
 				847CF4F9184A513100758A18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
