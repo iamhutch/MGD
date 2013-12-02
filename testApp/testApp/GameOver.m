@@ -11,18 +11,15 @@
 
 @implementation GameOver
 
+// SETUP SCENE
 +(CCScene *) scene
 {
-	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
 	
-	// 'layer' is an autorelease object.
 	GameOver *layer = [GameOver node];
 	
-	// add layer as a child to scene
 	[scene addChild: layer];
 	
-	// return the scene
 	return scene;
 }
 
@@ -38,8 +35,9 @@
 		background.position = ccp(winSize.width/2, winSize.height/2);
 		[self addChild: background];
         
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"GAME OVER" fontName:@"Courier New" fontSize:80];
-        label.position = ccp(240, 240);
+        CCLabelTTF *label = [CCLabelTTF labelWithString:@"GAME OVER" fontName:@"Helvetica" fontSize:60];
+        label.position = ccp(280, 260);
+        label.color = ccc3(0,0,0);
         [self addChild:label];
         
         [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self
