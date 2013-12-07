@@ -44,28 +44,24 @@
 		background.position = ccp(winSize.width/2, winSize.height/2);
 		[self addChild: background];
 
+        // PROGRESS BAR AT THE TOP AS AN EVENT
         _bar = [CCSprite spriteWithFile:@"bar.png"];
-        _bar.position = ccp(240,160);
+        _bar.position = ccp(10, 320);
         _bar.anchorPoint = ccp(0.0,0.5);
+        [self addChild:_bar z:5];
         
-        
-        
-        // WOODCHUCK
+                
+        // WOODCHUCKS
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim-ipadhd.plist"];
         
-        // WOODCHUCK ANIMATION
+        // WOODCHUCK ANIMATIONS ================================
         NSMutableArray *walkingFrames = [NSMutableArray array];
         NSMutableArray *collisionFrames = [NSMutableArray array];
-        
         for (int i=0; i<=1; i++)
         {
             [walkingFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"woodchuck-walking0%d.png", i]]];
             [collisionFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"woodchuck-hit0%d.png", i]]];
         }
-        
-        
-        walkingAnimation = [CCAnimation animationWithSpriteFrames:walkingFrames delay:0.25f];
-        collisionAnimation = [CCAnimation animationWithSpriteFrames:collisionFrames delay:0.5f];
         
         _woodchuckWalk = [CCSprite spriteWithSpriteFrameName:@"woodchuck-walking00.png"];
         _woodchuckWalk.position = ccp(_woodchuckWalk.contentSize.width/2, 90);
@@ -77,21 +73,37 @@
         [_woodchuckHit setVisible:NO];
         [self addChild:_woodchuckHit];
         
+        walkingAnimation = [CCAnimation animationWithSpriteFrames:walkingFrames delay:0.25f];
         walkAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkingAnimation]];
         [_woodchuckWalk runAction:walkAction];
         
+        collisionAnimation = [CCAnimation animationWithSpriteFrames:collisionFrames delay:0.5f];
         collisionAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:collisionAnimation]];
         [_woodchuckHit runAction:collisionAction];
 
+        
+        
         // PILE OF WOOD
         _wood = [CCSprite spriteWithFile:@"wood.png"];
         _wood.position = ccp(400, 60);
         [self addChild:_wood];
         
-        // FARMER AND TRACTOR
-        _tractor = [CCSprite spriteWithFile:@"tractor.png"];
+        // FARMER TRACTOR ANIMATION
+        NSMutableArray *tractorFrames = [NSMutableArray array];
+        for (int i=0; i<=3; i++)
+        {
+            [tractorFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"tractor-%d.png", i]]];
+        }
+        
+        _tractor = [CCSprite spriteWithSpriteFrameName:@"tractor-0.png"];
         _tractor.position = ccp(-(_tractor.contentSize.width), 140);
         [self addChild:_tractor];
+        
+        tractorAnimation = [CCAnimation animationWithSpriteFrames:tractorFrames delay:0.25f];
+        tractorAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:tractorAnimation]];
+        [_tractor runAction:tractorAction];
+
+            
         
         // START OUR WOODCHUCK WALKING AND TRACTOR ROLLING
         [self sendWoodChuck];
@@ -178,6 +190,7 @@
 // CHECK THE STATUS OF OUR SPRITES
 -(void) tick:(ccTime) dt {
     
+    _bar.scaleX = (float) _woodchuckWalk.position.x;
 
     _playerRect = [self rectPlayer];
     _woodRect = [self rectWood];

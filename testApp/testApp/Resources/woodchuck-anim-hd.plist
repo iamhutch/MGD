@@ -4,14 +4,66 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>woodchuck-hit00.png</key>
+            <key>tractor-0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{83,83},{79,102}}</string>
+                <string>{{238,297},{234,212}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{234,212}}</string>
+                <key>sourceSize</key>
+                <string>{234,212}</string>
+            </dict>
+            <key>tractor-1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,297},{234,212}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{234,212}}</string>
+                <key>sourceSize</key>
+                <string>{234,212}</string>
+            </dict>
+            <key>tractor-2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{238,83},{234,212}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{234,212}}</string>
+                <key>sourceSize</key>
+                <string>{234,212}</string>
+            </dict>
+            <key>tractor-3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,83},{234,212}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{234,212}}</string>
+                <key>sourceSize</key>
+                <string>{234,212}</string>
+            </dict>
+            <key>woodchuck-hit00.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{314,2},{79,102}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{79,102}}</string>
                 <key>sourceSize</key>
@@ -20,7 +72,7 @@
             <key>woodchuck-hit01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{83,2},{79,102}}</string>
+                <string>{{210,2},{79,102}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,11 +85,11 @@
             <key>woodchuck-walking00.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,106},{79,102}}</string>
+                <string>{{106,2},{79,102}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{79,102}}</string>
                 <key>sourceSize</key>
@@ -50,7 +102,7 @@
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{79,102}}</string>
                 <key>sourceSize</key>
@@ -64,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>woodchuck-anim-hd.png</string>
             <key>size</key>
-            <string>{256,256}</string>
+            <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e561be0e2ef241e7fcc71a8233aae65f:b54f6676ce3f3823995fa9768967bc65:b8d918090b3ab491d14767e14bbb106c$</string>
+            <string>$TexturePacker:SmartUpdate:f96392bb73b65caafd7dcbfb9310b1c6:09e25827033d95c33f53f7823a3a31a8:b8d918090b3ab491d14767e14bbb106c$</string>
             <key>textureFileName</key>
             <string>woodchuck-anim-hd.png</string>
         </dict>

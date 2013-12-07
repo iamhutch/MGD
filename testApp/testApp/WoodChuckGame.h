@@ -23,6 +23,10 @@
     CGRect _tractorRect;
     CCAnimation *walkingAnimation;
     CCAnimation *collisionAnimation;
+    CCAnimation *tractorAnimation;
+    CCAction *walkAction;
+    CCAction *collisionAction;
+    CCAction *tractorAction;
     BOOL woodchuckWalk;
     CCSprite *_bar;
 }
