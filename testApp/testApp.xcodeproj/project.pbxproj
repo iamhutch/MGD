@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840BDC391850235300AFCBCC /* woodchuck-anim-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC331850235300AFCBCC /* woodchuck-anim-hd.plist */; };
+		840BDC3A1850235300AFCBCC /* woodchuck-anim-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC341850235300AFCBCC /* woodchuck-anim-hd.png */; };
+		840BDC3B1850235300AFCBCC /* woodchuck-anim-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC351850235300AFCBCC /* woodchuck-anim-ipadhd.plist */; };
+		840BDC3C1850235300AFCBCC /* woodchuck-anim-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC361850235300AFCBCC /* woodchuck-anim-ipadhd.png */; };
+		840BDC3D1850235300AFCBCC /* woodchuck-anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC371850235300AFCBCC /* woodchuck-anim.plist */; };
+		840BDC3E1850235300AFCBCC /* woodchuck-anim.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC381850235300AFCBCC /* woodchuck-anim.png */; };
+		840BDC41185179C600AFCBCC /* woodchuck-hit01.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC40185179C600AFCBCC /* woodchuck-hit01.png */; };
+		840BDC431851810400AFCBCC /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC421851810400AFCBCC /* bar.png */; };
 		847CF348184A512E00758A18 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847CF347184A512E00758A18 /* QuartzCore.framework */; };
 		847CF34A184A512E00758A18 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847CF349184A512E00758A18 /* OpenGLES.framework */; };
 		847CF34C184A512E00758A18 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847CF34B184A512E00758A18 /* OpenAL.framework */; };
@@ -157,6 +165,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840BDC331850235300AFCBCC /* woodchuck-anim-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim-hd.plist"; path = "Resources/woodchuck-anim-hd.plist"; sourceTree = "<group>"; };
+		840BDC341850235300AFCBCC /* woodchuck-anim-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim-hd.png"; path = "Resources/woodchuck-anim-hd.png"; sourceTree = "<group>"; };
+		840BDC351850235300AFCBCC /* woodchuck-anim-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim-ipadhd.plist"; path = "Resources/woodchuck-anim-ipadhd.plist"; sourceTree = "<group>"; };
+		840BDC361850235300AFCBCC /* woodchuck-anim-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim-ipadhd.png"; path = "Resources/woodchuck-anim-ipadhd.png"; sourceTree = "<group>"; };
+		840BDC371850235300AFCBCC /* woodchuck-anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim.plist"; path = "Resources/woodchuck-anim.plist"; sourceTree = "<group>"; };
+		840BDC381850235300AFCBCC /* woodchuck-anim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim.png"; path = "Resources/woodchuck-anim.png"; sourceTree = "<group>"; };
+		840BDC40185179C600AFCBCC /* woodchuck-hit01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-hit01.png"; path = "Resources/woodchuck-hit01.png"; sourceTree = "<group>"; };
+		840BDC421851810400AFCBCC /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bar.png; path = Resources/bar.png; sourceTree = "<group>"; };
 		847CF344184A512E00758A18 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847CF347184A512E00758A18 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		847CF349184A512E00758A18 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -476,6 +492,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840BDC1718501D3100AFCBCC /* background */ = {
+			isa = PBXGroup;
+			children = (
+				840BDC421851810400AFCBCC /* bar.png */,
+				847CF528184D0DBC00758A18 /* start.png */,
+				847CF506184C107E00758A18 /* bg.png */,
+			);
+			name = background;
+			sourceTree = "<group>";
+		};
+		840BDC1818501D5400AFCBCC /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				847CF521184C473C00758A18 /* hit.caf */,
+				847CF51D184C40B800758A18 /* crunch.caf */,
+				847CF523184D088500758A18 /* music.caf */,
+				847CF51E184C431600758A18 /* running.caf */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		840BDC1918501D7A00AFCBCC /* default */ = {
+			isa = PBXGroup;
+			children = (
+				847CF35D184A512E00758A18 /* Default.png */,
+				847CF35F184A512E00758A18 /* Default@2x.png */,
+				847CF361184A512E00758A18 /* Default-568h@2x.png */,
+				847CF363184A512E00758A18 /* Default-Landscape~ipad.png */,
+			);
+			name = default;
+			sourceTree = "<group>";
+		};
+		840BDC1A18501D8200AFCBCC /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				847CF365184A512E00758A18 /* Icon-72.png */,
+				847CF367184A512E00758A18 /* Icon-Small-50.png */,
+				847CF369184A512E00758A18 /* Icon-Small.png */,
+				847CF36B184A512E00758A18 /* Icon-Small@2x.png */,
+				847CF36D184A512E00758A18 /* Icon.png */,
+				847CF36F184A512E00758A18 /* Icon@2x.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		840BDC3F1850235700AFCBCC /* woodchuck */ = {
+			isa = PBXGroup;
+			children = (
+				840BDC40185179C600AFCBCC /* woodchuck-hit01.png */,
+				840BDC331850235300AFCBCC /* woodchuck-anim-hd.plist */,
+				840BDC341850235300AFCBCC /* woodchuck-anim-hd.png */,
+				840BDC351850235300AFCBCC /* woodchuck-anim-ipadhd.plist */,
+				840BDC361850235300AFCBCC /* woodchuck-anim-ipadhd.png */,
+				840BDC371850235300AFCBCC /* woodchuck-anim.plist */,
+				840BDC381850235300AFCBCC /* woodchuck-anim.png */,
+			);
+			name = woodchuck;
+			sourceTree = "<group>";
+		};
 		847CF33B184A512E00758A18 = {
 			isa = PBXGroup;
 			children = (
@@ -517,15 +592,15 @@
 				847CF4ED184A513100758A18 /* AppDelegate.m */,
 				847CF4F2184A513100758A18 /* IntroLayer.h */,
 				847CF4F3184A513100758A18 /* IntroLayer.m */,
+				847CF525184D0BA800758A18 /* Start.h */,
+				847CF526184D0BA800758A18 /* Start.m */,
 				847CF513184C13AA00758A18 /* WoodChuckGame.h */,
 				847CF514184C13AA00758A18 /* WoodChuckGame.m */,
+				847CF51A184C384100758A18 /* GameOver.h */,
+				847CF51B184C384100758A18 /* GameOver.m */,
 				847CF35C184A512E00758A18 /* Resources */,
 				847CF374184A512E00758A18 /* libs */,
 				847CF4E8184A513100758A18 /* Supporting Files */,
-				847CF51A184C384100758A18 /* GameOver.h */,
-				847CF51B184C384100758A18 /* GameOver.m */,
-				847CF525184D0BA800758A18 /* Start.h */,
-				847CF526184D0BA800758A18 /* Start.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -533,27 +608,16 @@
 		847CF35C184A512E00758A18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				847CF521184C473C00758A18 /* hit.caf */,
-				847CF51D184C40B800758A18 /* crunch.caf */,
+				840BDC3F1850235700AFCBCC /* woodchuck */,
+				840BDC1718501D3100AFCBCC /* background */,
+				840BDC1818501D5400AFCBCC /* sounds */,
 				847CF50E184C10A200758A18 /* road.png */,
 				847CF508184C108E00758A18 /* tractor.png */,
-				847CF523184D088500758A18 /* music.caf */,
 				847CF509184C108E00758A18 /* wood.png */,
 				847CF52A184D10B500758A18 /* wood-3.png */,
-				847CF51E184C431600758A18 /* running.caf */,
 				847CF50A184C108E00758A18 /* woodchuck.png */,
-				847CF506184C107E00758A18 /* bg.png */,
-				847CF35D184A512E00758A18 /* Default.png */,
-				847CF35F184A512E00758A18 /* Default@2x.png */,
-				847CF528184D0DBC00758A18 /* start.png */,
-				847CF361184A512E00758A18 /* Default-568h@2x.png */,
-				847CF363184A512E00758A18 /* Default-Landscape~ipad.png */,
-				847CF365184A512E00758A18 /* Icon-72.png */,
-				847CF367184A512E00758A18 /* Icon-Small-50.png */,
-				847CF369184A512E00758A18 /* Icon-Small.png */,
-				847CF36B184A512E00758A18 /* Icon-Small@2x.png */,
-				847CF36D184A512E00758A18 /* Icon.png */,
-				847CF36F184A512E00758A18 /* Icon@2x.png */,
+				840BDC1918501D7A00AFCBCC /* default */,
+				840BDC1A18501D8200AFCBCC /* icons */,
 				847CF371184A512E00758A18 /* Info.plist */,
 				847CF372184A512E00758A18 /* iTunesArtwork */,
 			);
@@ -975,21 +1039,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				847CF524184D088E00758A18 /* music.caf in Resources */,
+				840BDC3B1850235300AFCBCC /* woodchuck-anim-ipadhd.plist in Resources */,
 				847CF522184C474400758A18 /* hit.caf in Resources */,
 				847CF51F184C43F300758A18 /* crunch.caf in Resources */,
+				840BDC3A1850235300AFCBCC /* woodchuck-anim-hd.png in Resources */,
 				847CF520184C43F300758A18 /* running.caf in Resources */,
 				847CF36E184A512E00758A18 /* Icon.png in Resources */,
+				840BDC3D1850235300AFCBCC /* woodchuck-anim.plist in Resources */,
+				840BDC3C1850235300AFCBCC /* woodchuck-anim-ipadhd.png in Resources */,
 				847CF4CC184A513000758A18 /* ChangeLog in Resources */,
 				847CF360184A512E00758A18 /* Default@2x.png in Resources */,
 				847CF507184C107E00758A18 /* bg.png in Resources */,
 				847CF36A184A512E00758A18 /* Icon-Small.png in Resources */,
 				847CF366184A512E00758A18 /* Icon-72.png in Resources */,
 				847CF35E184A512E00758A18 /* Default.png in Resources */,
+				840BDC3E1850235300AFCBCC /* woodchuck-anim.png in Resources */,
+				840BDC391850235300AFCBCC /* woodchuck-anim-hd.plist in Resources */,
 				847CF52B184D10B500758A18 /* wood-3.png in Resources */,
+				840BDC431851810400AFCBCC /* bar.png in Resources */,
 				847CF50F184C10A200758A18 /* road.png in Resources */,
 				847CF368184A512E00758A18 /* Icon-Small-50.png in Resources */,
 				847CF50D184C108E00758A18 /* woodchuck.png in Resources */,
 				847CF529184D0DBC00758A18 /* start.png in Resources */,
+				840BDC41185179C600AFCBCC /* woodchuck-hit01.png in Resources */,
 				847CF50C184C108E00758A18 /* wood.png in Resources */,
 				847CF373184A512E00758A18 /* iTunesArtwork in Resources */,
 				847CF36C184A512E00758A18 /* Icon-Small@2x.png in Resources */,

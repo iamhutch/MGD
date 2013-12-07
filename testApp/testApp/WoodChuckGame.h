@@ -14,13 +14,26 @@
 @interface WoodChuckGame : CCLayer
 {
     CGSize winSize;
-    CCSprite *_player;
+    CCSprite *_woodchuckWalk;
+    CCSprite *_woodchuckHit;
     CCSprite *_wood;
     CCSprite *_tractor;
     CGRect _playerRect;
     CGRect _woodRect;
     CGRect _tractorRect;
+    CCAnimation *walkingAnimation;
+    CCAnimation *collisionAnimation;
+    BOOL woodchuckWalk;
+    CCSprite *_bar;
 }
+
+@property (nonatomic, strong) CCSprite *_woodchuckWalk;
+@property (nonatomic, strong) CCSprite *_woodchuckHit;
+@property (nonatomic, strong) CCAction *walkAction;
+@property (nonatomic, strong) CCAction *collisionAction;
+@property (nonatomic, strong) CCAnimation *walkingAnimation;
+@property (nonatomic, strong) CCAnimation *collisionAnimation;
+
 
 +(CCScene *) scene;
 
