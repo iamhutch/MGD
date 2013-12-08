@@ -46,7 +46,7 @@
 
         // PROGRESS BAR AT THE TOP AS AN EVENT
         _bar = [CCSprite spriteWithFile:@"bar.png"];
-        _bar.position = ccp(10, 320);
+        _bar.position = ccp(0.0, 300);
         _bar.anchorPoint = ccp(0.0,0.5);
         [self addChild:_bar z:5];
         
@@ -88,6 +88,7 @@
         _wood.position = ccp(400, 60);
         [self addChild:_wood];
         
+        
         // FARMER TRACTOR ANIMATION
         NSMutableArray *tractorFrames = [NSMutableArray array];
         for (int i=0; i<=3; i++)
@@ -103,7 +104,7 @@
         tractorAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:tractorAnimation]];
         [_tractor runAction:tractorAction];
 
-            
+        
         
         // START OUR WOODCHUCK WALKING AND TRACTOR ROLLING
         [self sendWoodChuck];
@@ -183,7 +184,7 @@
 {
     return CGRectMake(_tractor.position.x - (_tractor.contentSize.width/2),
                       _tractor.position.y - (_tractor.contentSize.height/2),
-                      _tractor.contentSize.width, _tractor.contentSize.height);
+                      _tractor.contentSize.width-20, _tractor.contentSize.height);
 }
 
 
