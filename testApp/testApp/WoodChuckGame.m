@@ -38,8 +38,20 @@
         
         // BACKGROUND
         CCSprite *background;
-		if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
-			background = [CCSprite spriteWithFile:@"bg.png"];
+        
+		if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone )
+        {
+            NSLog(@"WINDOW SIZE: %f", winSize.width);
+            // CHECK IF WE ARE IN IPHONE 4 RETINA OR NOT
+			if ( winSize.width > 480)
+            {
+                background = [CCSprite spriteWithFile:@"bg-hd.png"];
+            }
+            else
+            {
+                background = [CCSprite spriteWithFile:@"bg.png"];
+            }
+
 		}
 		background.position = ccp(winSize.width/2, winSize.height/2);
 		[self addChild: background];
@@ -50,9 +62,26 @@
         _bar.anchorPoint = ccp(0.0,0.5);
         [self addChild:_bar z:5];
         
-                
+        // Standard method to create a button
+        CCMenuItem *pauseButton = [CCMenuItemImage itemWithNormalImage:@"button-pause.png" selectedImage:@"button-pause-selected.png" target:self selector:@selector(pauseButtonPressed:)];
+        pauseButton.position = ccp(winSize.width-50, winSize.height-50);
+        CCMenu *pauseMenu = [CCMenu menuWithItems:pauseButton, nil];
+        pauseMenu.position = CGPointZero;
+        [self addChild:pauseMenu z:10];
+        gamePause = NO;
+        
+        
         // WOODCHUCKS
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim-ipadhd.plist"];
+        if ( winSize.width > 480)
+        {
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim-ipadhd.plist"];
+        }
+        else
+        {
+            pauseMenu.scale = 0.5f;
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim-hd.plist"];
+        }
+
         
         // WOODCHUCK ANIMATIONS ================================
         NSMutableArray *walkingFrames = [NSMutableArray array];
@@ -85,7 +114,15 @@
         
         // PILE OF WOOD
         _wood = [CCSprite spriteWithFile:@"wood.png"];
-        _wood.position = ccp(400, 60);
+        if ( winSize.width > 480)
+        {
+            _wood.scale = 1.0f;
+        }
+        else
+        {
+            _wood.scale = 0.5f;
+        }
+        _wood.position = ccp(winSize.width*0.75, 60);
         [self addChild:_wood];
         
         
@@ -120,6 +157,24 @@
 
     }
     return self;
+}
+
+// WHEN PAUSE BUTTON IS PRESSED, TOGGLE THE PAUSE FUNCTIONS
+- (void)pauseButtonPressed:(id)sender
+{
+    if (gamePause == NO)
+    {
+        [[CCDirector sharedDirector] stopAnimation];
+        [[CCDirector sharedDirector] pause];
+        gamePause = YES;
+    }
+    else
+    {
+        [[CCDirector sharedDirector] stopAnimation];
+        [[CCDirector sharedDirector] resume];
+        [[CCDirector sharedDirector] startAnimation];
+        gamePause = NO;
+    }
 }
 
 // START WOODCHUCK WALKING WITH LINEAR INTERPOLATION
@@ -191,6 +246,8 @@
 // CHECK THE STATUS OF OUR SPRITES
 -(void) tick:(ccTime) dt {
     
+    NSLog(@"WOODCHUCK WALK POSITION: %f", (float)_woodchuckWalk.position.x);
+    
     _bar.scaleX = (float) _woodchuckWalk.position.x;
 
     _playerRect = [self rectPlayer];
@@ -201,7 +258,7 @@
     if (CGRectIntersectsRect(_playerRect, _woodRect))
     {
         [_woodchuckWalk setVisible:NO];
-        [_woodchuckHit setVisible:YES];
+        [_woodchuckHit setVisible:NO];
     }
     else
     {
@@ -231,5 +288,26 @@
 
 	[super dealloc];
 }
+
+- (void) applicationDidEnterBackground:(UIApplication *)application
+{
+    [[CCDirector sharedDirector] stopAnimation];
+    [[CCDirector sharedDirector] pause];
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    [[CCDirector sharedDirector] stopAnimation];
+    [[CCDirector sharedDirector] pause];
+}
+
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [[CCDirector sharedDirector] stopAnimation]; // call this to make sure you don't start a second display link!
+    [[CCDirector sharedDirector] resume];
+    [[CCDirector sharedDirector] startAnimation];
+}
+
 
 @end

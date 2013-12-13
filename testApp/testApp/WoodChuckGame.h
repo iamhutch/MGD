@@ -29,6 +29,7 @@
     CCAction *tractorAction;
     BOOL woodchuckWalk;
     CCSprite *_bar;
+    bool gamePause;
 }
 
 @property (nonatomic, strong) CCSprite *_woodchuckWalk;

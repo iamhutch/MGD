@@ -160,8 +160,12 @@
 		847CF522184C474400758A18 /* hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF521184C473C00758A18 /* hit.caf */; };
 		847CF524184D088E00758A18 /* music.caf in Resources */ = {isa = PBXBuildFile; fileRef = 847CF523184D088500758A18 /* music.caf */; };
 		847CF527184D0BA800758A18 /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CF526184D0BA800758A18 /* Start.m */; };
-		847CF529184D0DBC00758A18 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF528184D0DBC00758A18 /* start.png */; };
 		847CF52B184D10B500758A18 /* wood-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF52A184D10B500758A18 /* wood-3.png */; };
+		84A7A8751856B027001870B5 /* button-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8741856B027001870B5 /* button-pause.png */; };
+		84A7A8771856B083001870B5 /* button-pause-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8761856B083001870B5 /* button-pause-selected.png */; };
+		84A7A87A1858E83B001870B5 /* bg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8781858E83B001870B5 /* bg-hd.png */; };
+		84A7A87B1858E83B001870B5 /* start-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8791858E83B001870B5 /* start-hd.png */; };
+		84A7A87D18594933001870B5 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A87C18594933001870B5 /* start.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -467,8 +471,12 @@
 		847CF523184D088500758A18 /* music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = music.caf; path = Resources/music.caf; sourceTree = "<group>"; };
 		847CF525184D0BA800758A18 /* Start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Start.h; sourceTree = "<group>"; };
 		847CF526184D0BA800758A18 /* Start.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Start.m; sourceTree = "<group>"; };
-		847CF528184D0DBC00758A18 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start.png; path = Resources/start.png; sourceTree = "<group>"; };
 		847CF52A184D10B500758A18 /* wood-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wood-3.png"; path = "Resources/wood-3.png"; sourceTree = "<group>"; };
+		84A7A8741856B027001870B5 /* button-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-pause.png"; path = "Resources/button-pause.png"; sourceTree = "<group>"; };
+		84A7A8761856B083001870B5 /* button-pause-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-pause-selected.png"; path = "Resources/button-pause-selected.png"; sourceTree = "<group>"; };
+		84A7A8781858E83B001870B5 /* bg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-hd.png"; path = "Resources/bg-hd.png"; sourceTree = "<group>"; };
+		84A7A8791858E83B001870B5 /* start-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "start-hd.png"; path = "Resources/start-hd.png"; sourceTree = "<group>"; };
+		84A7A87C18594933001870B5 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start.png; path = Resources/start.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -495,9 +503,11 @@
 		840BDC1718501D3100AFCBCC /* background */ = {
 			isa = PBXGroup;
 			children = (
+				84A7A87C18594933001870B5 /* start.png */,
+				84A7A8791858E83B001870B5 /* start-hd.png */,
 				840BDC421851810400AFCBCC /* bar.png */,
-				847CF528184D0DBC00758A18 /* start.png */,
 				847CF506184C107E00758A18 /* bg.png */,
+				84A7A8781858E83B001870B5 /* bg-hd.png */,
 			);
 			name = background;
 			sourceTree = "<group>";
@@ -608,6 +618,8 @@
 		847CF35C184A512E00758A18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84A7A8741856B027001870B5 /* button-pause.png */,
+				84A7A8761856B083001870B5 /* button-pause-selected.png */,
 				840BDC3F1850235700AFCBCC /* woodchuck */,
 				840BDC1718501D3100AFCBCC /* background */,
 				840BDC1818501D5400AFCBCC /* sounds */,
@@ -1048,19 +1060,23 @@
 				840BDC3D1850235300AFCBCC /* woodchuck-anim.plist in Resources */,
 				840BDC3C1850235300AFCBCC /* woodchuck-anim-ipadhd.png in Resources */,
 				847CF4CC184A513000758A18 /* ChangeLog in Resources */,
+				84A7A87D18594933001870B5 /* start.png in Resources */,
+				84A7A8751856B027001870B5 /* button-pause.png in Resources */,
 				847CF360184A512E00758A18 /* Default@2x.png in Resources */,
+				84A7A8771856B083001870B5 /* button-pause-selected.png in Resources */,
 				847CF507184C107E00758A18 /* bg.png in Resources */,
 				847CF36A184A512E00758A18 /* Icon-Small.png in Resources */,
 				847CF366184A512E00758A18 /* Icon-72.png in Resources */,
 				847CF35E184A512E00758A18 /* Default.png in Resources */,
 				840BDC3E1850235300AFCBCC /* woodchuck-anim.png in Resources */,
+				84A7A87B1858E83B001870B5 /* start-hd.png in Resources */,
 				840BDC391850235300AFCBCC /* woodchuck-anim-hd.plist in Resources */,
 				847CF52B184D10B500758A18 /* wood-3.png in Resources */,
 				840BDC431851810400AFCBCC /* bar.png in Resources */,
 				847CF50F184C10A200758A18 /* road.png in Resources */,
+				84A7A87A1858E83B001870B5 /* bg-hd.png in Resources */,
 				847CF368184A512E00758A18 /* Icon-Small-50.png in Resources */,
 				847CF50D184C108E00758A18 /* woodchuck.png in Resources */,
-				847CF529184D0DBC00758A18 /* start.png in Resources */,
 				840BDC41185179C600AFCBCC /* woodchuck-hit01.png in Resources */,
 				847CF50C184C108E00758A18 /* wood.png in Resources */,
 				847CF373184A512E00758A18 /* iTunesArtwork in Resources */,
@@ -1249,12 +1265,14 @@
 				GCC_PREFIX_HEADER = testApp/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"testApp/libs/kazmath/include\"";
 				INFOPLIST_FILE = testApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1268,12 +1286,14 @@
 				GCC_PREFIX_HEADER = testApp/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"testApp/libs/kazmath/include\"";
 				INFOPLIST_FILE = testApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

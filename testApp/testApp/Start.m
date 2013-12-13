@@ -30,14 +30,21 @@
         CCSprite *background;
 		
 		if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
-			background = [CCSprite spriteWithFile:@"start.png"];
+            if (winSize.width < 480)
+            {
+                background = [CCSprite spriteWithFile:@"start-hd.png"];
+            }
+            else
+            {
+                background = [CCSprite spriteWithFile:@"start.png"];
+            }
 		}
 		background.position = ccp(winSize.width/2, winSize.height/2);
 		[self addChild: background];
         
         CCLabelTTF *label = [CCLabelTTF labelWithString:@"Click to Start" fontName:@"Helvetica" fontSize:60];
         label.color = ccc3(204,0,0);
-        label.position = ccp(280, 240);
+        label.position = ccp(winSize.width/2, winSize.height/2+100);
         [self addChild:label];
         
         [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self
