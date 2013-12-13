@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840BDC391850235300AFCBCC /* woodchuck-anim-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC331850235300AFCBCC /* woodchuck-anim-hd.plist */; };
-		840BDC3A1850235300AFCBCC /* woodchuck-anim-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC341850235300AFCBCC /* woodchuck-anim-hd.png */; };
-		840BDC3B1850235300AFCBCC /* woodchuck-anim-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC351850235300AFCBCC /* woodchuck-anim-ipadhd.plist */; };
-		840BDC3C1850235300AFCBCC /* woodchuck-anim-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC361850235300AFCBCC /* woodchuck-anim-ipadhd.png */; };
-		840BDC3D1850235300AFCBCC /* woodchuck-anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC371850235300AFCBCC /* woodchuck-anim.plist */; };
-		840BDC3E1850235300AFCBCC /* woodchuck-anim.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC381850235300AFCBCC /* woodchuck-anim.png */; };
 		840BDC41185179C600AFCBCC /* woodchuck-hit01.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC40185179C600AFCBCC /* woodchuck-hit01.png */; };
 		840BDC431851810400AFCBCC /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BDC421851810400AFCBCC /* bar.png */; };
 		847CF348184A512E00758A18 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847CF347184A512E00758A18 /* QuartzCore.framework */; };
@@ -163,18 +157,22 @@
 		847CF52B184D10B500758A18 /* wood-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 847CF52A184D10B500758A18 /* wood-3.png */; };
 		84A7A8751856B027001870B5 /* button-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8741856B027001870B5 /* button-pause.png */; };
 		84A7A8771856B083001870B5 /* button-pause-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8761856B083001870B5 /* button-pause-selected.png */; };
-		84A7A87A1858E83B001870B5 /* bg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8781858E83B001870B5 /* bg-hd.png */; };
-		84A7A87B1858E83B001870B5 /* start-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8791858E83B001870B5 /* start-hd.png */; };
+		84A7A87A1858E83B001870B5 /* bg_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A8781858E83B001870B5 /* bg_hd.png */; };
 		84A7A87D18594933001870B5 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7A87C18594933001870B5 /* start.png */; };
+		84D21B7E185B70470021E5D8 /* start_ipad_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B7C185B70470021E5D8 /* start_ipad_hd.png */; };
+		84D21B7F185B70470021E5D8 /* start_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B7D185B70470021E5D8 /* start_ipad.png */; };
+		84D21B86185B7B4A0021E5D8 /* bg_ipad_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B84185B7B4A0021E5D8 /* bg_ipad_hd.png */; };
+		84D21B87185B7B4A0021E5D8 /* bg_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B85185B7B4A0021E5D8 /* bg_ipad.png */; };
+		84D21B8E185B8C2F0021E5D8 /* woodchuck-anim-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B88185B8C2F0021E5D8 /* woodchuck-anim-hd.plist */; };
+		84D21B8F185B8C2F0021E5D8 /* woodchuck-anim-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B89185B8C2F0021E5D8 /* woodchuck-anim-hd.png */; };
+		84D21B90185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B8A185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.plist */; };
+		84D21B91185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B8B185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.png */; };
+		84D21B92185B8C2F0021E5D8 /* woodchuck-anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B8C185B8C2F0021E5D8 /* woodchuck-anim.plist */; };
+		84D21B93185B8C2F0021E5D8 /* woodchuck-anim.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B8D185B8C2F0021E5D8 /* woodchuck-anim.png */; };
+		84D21B95185B90590021E5D8 /* start_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D21B94185B90590021E5D8 /* start_hd.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		840BDC331850235300AFCBCC /* woodchuck-anim-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim-hd.plist"; path = "Resources/woodchuck-anim-hd.plist"; sourceTree = "<group>"; };
-		840BDC341850235300AFCBCC /* woodchuck-anim-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim-hd.png"; path = "Resources/woodchuck-anim-hd.png"; sourceTree = "<group>"; };
-		840BDC351850235300AFCBCC /* woodchuck-anim-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim-ipadhd.plist"; path = "Resources/woodchuck-anim-ipadhd.plist"; sourceTree = "<group>"; };
-		840BDC361850235300AFCBCC /* woodchuck-anim-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim-ipadhd.png"; path = "Resources/woodchuck-anim-ipadhd.png"; sourceTree = "<group>"; };
-		840BDC371850235300AFCBCC /* woodchuck-anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim.plist"; path = "Resources/woodchuck-anim.plist"; sourceTree = "<group>"; };
-		840BDC381850235300AFCBCC /* woodchuck-anim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim.png"; path = "Resources/woodchuck-anim.png"; sourceTree = "<group>"; };
 		840BDC40185179C600AFCBCC /* woodchuck-hit01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-hit01.png"; path = "Resources/woodchuck-hit01.png"; sourceTree = "<group>"; };
 		840BDC421851810400AFCBCC /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bar.png; path = Resources/bar.png; sourceTree = "<group>"; };
 		847CF344184A512E00758A18 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -474,9 +472,19 @@
 		847CF52A184D10B500758A18 /* wood-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wood-3.png"; path = "Resources/wood-3.png"; sourceTree = "<group>"; };
 		84A7A8741856B027001870B5 /* button-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-pause.png"; path = "Resources/button-pause.png"; sourceTree = "<group>"; };
 		84A7A8761856B083001870B5 /* button-pause-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-pause-selected.png"; path = "Resources/button-pause-selected.png"; sourceTree = "<group>"; };
-		84A7A8781858E83B001870B5 /* bg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-hd.png"; path = "Resources/bg-hd.png"; sourceTree = "<group>"; };
-		84A7A8791858E83B001870B5 /* start-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "start-hd.png"; path = "Resources/start-hd.png"; sourceTree = "<group>"; };
+		84A7A8781858E83B001870B5 /* bg_hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_hd.png; path = Resources/bg_hd.png; sourceTree = "<group>"; };
 		84A7A87C18594933001870B5 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start.png; path = Resources/start.png; sourceTree = "<group>"; };
+		84D21B7C185B70470021E5D8 /* start_ipad_hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start_ipad_hd.png; path = Resources/start_ipad_hd.png; sourceTree = "<group>"; };
+		84D21B7D185B70470021E5D8 /* start_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start_ipad.png; path = Resources/start_ipad.png; sourceTree = "<group>"; };
+		84D21B84185B7B4A0021E5D8 /* bg_ipad_hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_ipad_hd.png; path = Resources/bg_ipad_hd.png; sourceTree = "<group>"; };
+		84D21B85185B7B4A0021E5D8 /* bg_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_ipad.png; path = Resources/bg_ipad.png; sourceTree = "<group>"; };
+		84D21B88185B8C2F0021E5D8 /* woodchuck-anim-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim-hd.plist"; path = "Resources/woodchuck-anim-hd.plist"; sourceTree = "<group>"; };
+		84D21B89185B8C2F0021E5D8 /* woodchuck-anim-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim-hd.png"; path = "Resources/woodchuck-anim-hd.png"; sourceTree = "<group>"; };
+		84D21B8A185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim-ipadhd.plist"; path = "Resources/woodchuck-anim-ipadhd.plist"; sourceTree = "<group>"; };
+		84D21B8B185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim-ipadhd.png"; path = "Resources/woodchuck-anim-ipadhd.png"; sourceTree = "<group>"; };
+		84D21B8C185B8C2F0021E5D8 /* woodchuck-anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "woodchuck-anim.plist"; path = "Resources/woodchuck-anim.plist"; sourceTree = "<group>"; };
+		84D21B8D185B8C2F0021E5D8 /* woodchuck-anim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "woodchuck-anim.png"; path = "Resources/woodchuck-anim.png"; sourceTree = "<group>"; };
+		84D21B94185B90590021E5D8 /* start_hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start_hd.png; path = Resources/start_hd.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,11 +511,15 @@
 		840BDC1718501D3100AFCBCC /* background */ = {
 			isa = PBXGroup;
 			children = (
+				84D21B84185B7B4A0021E5D8 /* bg_ipad_hd.png */,
+				84D21B94185B90590021E5D8 /* start_hd.png */,
+				84D21B85185B7B4A0021E5D8 /* bg_ipad.png */,
+				84D21B7C185B70470021E5D8 /* start_ipad_hd.png */,
+				84D21B7D185B70470021E5D8 /* start_ipad.png */,
 				84A7A87C18594933001870B5 /* start.png */,
-				84A7A8791858E83B001870B5 /* start-hd.png */,
 				840BDC421851810400AFCBCC /* bar.png */,
 				847CF506184C107E00758A18 /* bg.png */,
-				84A7A8781858E83B001870B5 /* bg-hd.png */,
+				84A7A8781858E83B001870B5 /* bg_hd.png */,
 			);
 			name = background;
 			sourceTree = "<group>";
@@ -551,12 +563,12 @@
 			isa = PBXGroup;
 			children = (
 				840BDC40185179C600AFCBCC /* woodchuck-hit01.png */,
-				840BDC331850235300AFCBCC /* woodchuck-anim-hd.plist */,
-				840BDC341850235300AFCBCC /* woodchuck-anim-hd.png */,
-				840BDC351850235300AFCBCC /* woodchuck-anim-ipadhd.plist */,
-				840BDC361850235300AFCBCC /* woodchuck-anim-ipadhd.png */,
-				840BDC371850235300AFCBCC /* woodchuck-anim.plist */,
-				840BDC381850235300AFCBCC /* woodchuck-anim.png */,
+				84D21B88185B8C2F0021E5D8 /* woodchuck-anim-hd.plist */,
+				84D21B89185B8C2F0021E5D8 /* woodchuck-anim-hd.png */,
+				84D21B8A185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.plist */,
+				84D21B8B185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.png */,
+				84D21B8C185B8C2F0021E5D8 /* woodchuck-anim.plist */,
+				84D21B8D185B8C2F0021E5D8 /* woodchuck-anim.png */,
 			);
 			name = woodchuck;
 			sourceTree = "<group>";
@@ -1050,31 +1062,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D21B95185B90590021E5D8 /* start_hd.png in Resources */,
 				847CF524184D088E00758A18 /* music.caf in Resources */,
-				840BDC3B1850235300AFCBCC /* woodchuck-anim-ipadhd.plist in Resources */,
 				847CF522184C474400758A18 /* hit.caf in Resources */,
+				84D21B8F185B8C2F0021E5D8 /* woodchuck-anim-hd.png in Resources */,
 				847CF51F184C43F300758A18 /* crunch.caf in Resources */,
-				840BDC3A1850235300AFCBCC /* woodchuck-anim-hd.png in Resources */,
+				84D21B8E185B8C2F0021E5D8 /* woodchuck-anim-hd.plist in Resources */,
+				84D21B92185B8C2F0021E5D8 /* woodchuck-anim.plist in Resources */,
+				84D21B7F185B70470021E5D8 /* start_ipad.png in Resources */,
+				84D21B93185B8C2F0021E5D8 /* woodchuck-anim.png in Resources */,
 				847CF520184C43F300758A18 /* running.caf in Resources */,
 				847CF36E184A512E00758A18 /* Icon.png in Resources */,
-				840BDC3D1850235300AFCBCC /* woodchuck-anim.plist in Resources */,
-				840BDC3C1850235300AFCBCC /* woodchuck-anim-ipadhd.png in Resources */,
 				847CF4CC184A513000758A18 /* ChangeLog in Resources */,
 				84A7A87D18594933001870B5 /* start.png in Resources */,
 				84A7A8751856B027001870B5 /* button-pause.png in Resources */,
 				847CF360184A512E00758A18 /* Default@2x.png in Resources */,
 				84A7A8771856B083001870B5 /* button-pause-selected.png in Resources */,
 				847CF507184C107E00758A18 /* bg.png in Resources */,
+				84D21B86185B7B4A0021E5D8 /* bg_ipad_hd.png in Resources */,
 				847CF36A184A512E00758A18 /* Icon-Small.png in Resources */,
 				847CF366184A512E00758A18 /* Icon-72.png in Resources */,
+				84D21B7E185B70470021E5D8 /* start_ipad_hd.png in Resources */,
+				84D21B91185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.png in Resources */,
 				847CF35E184A512E00758A18 /* Default.png in Resources */,
-				840BDC3E1850235300AFCBCC /* woodchuck-anim.png in Resources */,
-				84A7A87B1858E83B001870B5 /* start-hd.png in Resources */,
-				840BDC391850235300AFCBCC /* woodchuck-anim-hd.plist in Resources */,
+				84D21B90185B8C2F0021E5D8 /* woodchuck-anim-ipadhd.plist in Resources */,
+				84D21B87185B7B4A0021E5D8 /* bg_ipad.png in Resources */,
 				847CF52B184D10B500758A18 /* wood-3.png in Resources */,
 				840BDC431851810400AFCBCC /* bar.png in Resources */,
 				847CF50F184C10A200758A18 /* road.png in Resources */,
-				84A7A87A1858E83B001870B5 /* bg-hd.png in Resources */,
+				84A7A87A1858E83B001870B5 /* bg_hd.png in Resources */,
 				847CF368184A512E00758A18 /* Icon-Small-50.png in Resources */,
 				847CF50D184C108E00758A18 /* woodchuck.png in Resources */,
 				840BDC41185179C600AFCBCC /* woodchuck-hit01.png in Resources */,

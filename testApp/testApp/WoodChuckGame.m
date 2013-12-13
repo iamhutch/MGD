@@ -35,53 +35,56 @@
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"crunch.caf"];
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"hit.caf"];
         winSize = [CCDirector sharedDirector].winSize;
+        surface = [CCDirector sharedDirector].winSizeInPixels;
         
         // BACKGROUND
         CCSprite *background;
         
 		if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone )
         {
-            NSLog(@"WINDOW SIZE: %f", winSize.width);
-            // CHECK IF WE ARE IN IPHONE 4 RETINA OR NOT
-			if ( winSize.width > 480)
+            if (surface.width > 480)
             {
-                background = [CCSprite spriteWithFile:@"bg-hd.png"];
+                background = [CCSprite spriteWithFile:@"bg_hd.png"];
+                [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim-hd.plist"];
             }
             else
             {
                 background = [CCSprite spriteWithFile:@"bg.png"];
+                [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim.plist"];
+            }
+		}
+        else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            if (surface.width > 1024)
+            {
+                background = [CCSprite spriteWithFile:@"bg_ipad_hd.png"];
+            }
+            else
+            {
+                background = [CCSprite spriteWithFile:@"bg_ipad.png"];
             }
 
-		}
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim-hd.plist"];
+        }
+        
 		background.position = ccp(winSize.width/2, winSize.height/2);
 		[self addChild: background];
 
         // PROGRESS BAR AT THE TOP AS AN EVENT
         _bar = [CCSprite spriteWithFile:@"bar.png"];
-        _bar.position = ccp(0.0, 300);
+        _bar.position = ccp(0.0, winSize.height);
         _bar.anchorPoint = ccp(0.0,0.5);
         [self addChild:_bar z:5];
         
         // Standard method to create a button
         CCMenuItem *pauseButton = [CCMenuItemImage itemWithNormalImage:@"button-pause.png" selectedImage:@"button-pause-selected.png" target:self selector:@selector(pauseButtonPressed:)];
-        pauseButton.position = ccp(winSize.width-50, winSize.height-50);
+        pauseButton.position = ccp(winSize.width-50, winSize.height-(winSize.height*0.10));
         CCMenu *pauseMenu = [CCMenu menuWithItems:pauseButton, nil];
         pauseMenu.position = CGPointZero;
         [self addChild:pauseMenu z:10];
         gamePause = NO;
         
         
-        // WOODCHUCKS
-        if ( winSize.width > 480)
-        {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim-ipadhd.plist"];
-        }
-        else
-        {
-            pauseMenu.scale = 0.5f;
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"woodchuck-anim-hd.plist"];
-        }
-
         
         // WOODCHUCK ANIMATIONS ================================
         NSMutableArray *walkingFrames = [NSMutableArray array];
@@ -93,12 +96,12 @@
         }
         
         _woodchuckWalk = [CCSprite spriteWithSpriteFrameName:@"woodchuck-walking00.png"];
-        _woodchuckWalk.position = ccp(_woodchuckWalk.contentSize.width/2, 90);
+        _woodchuckWalk.position = ccp(_woodchuckWalk.contentSize.width/2, winSize.height*0.20);
         [_woodchuckWalk setVisible:YES];
         [self addChild:_woodchuckWalk];
         
         _woodchuckHit = [CCSprite spriteWithSpriteFrameName:@"woodchuck-hit00.png"];
-        _woodchuckHit.position = ccp(_woodchuckWalk.position.x, 90);
+        _woodchuckHit.position = ccp(_woodchuckWalk.position.x, winSize.height*0.20);
         [_woodchuckHit setVisible:NO];
         [self addChild:_woodchuckHit];
         
@@ -114,15 +117,7 @@
         
         // PILE OF WOOD
         _wood = [CCSprite spriteWithFile:@"wood.png"];
-        if ( winSize.width > 480)
-        {
-            _wood.scale = 1.0f;
-        }
-        else
-        {
-            _wood.scale = 0.5f;
-        }
-        _wood.position = ccp(winSize.width*0.75, 60);
+        _wood.position = ccp(winSize.width*0.75, winSize.height*0.2);
         [self addChild:_wood];
         
         
@@ -134,14 +129,13 @@
         }
         
         _tractor = [CCSprite spriteWithSpriteFrameName:@"tractor-0.png"];
-        _tractor.position = ccp(-(_tractor.contentSize.width), 140);
+        _tractor.position = ccp(-(_tractor.contentSize.width), winSize.height*0.35);
         [self addChild:_tractor];
         
         tractorAnimation = [CCAnimation animationWithSpriteFrames:tractorFrames delay:0.25f];
         tractorAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:tractorAnimation]];
         [_tractor runAction:tractorAction];
 
-        
         
         // START OUR WOODCHUCK WALKING AND TRACTOR ROLLING
         [self sendWoodChuck];
@@ -154,6 +148,43 @@
         [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self
                                                          priority:0
                                                   swallowsTouches:YES];
+        
+        // SET SCALINGS
+        if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone )
+        {
+            if (surface.width > 480)
+            {
+                _woodchuckWalk.scale = 1.5f;
+                _woodchuckHit.scale = 1.5f;
+                _wood.scale = 1.0f;
+                _tractor.scale = 1.5f;
+            }
+            else
+            {
+                _woodchuckWalk.scale = 1.0f;
+                _woodchuckHit.scale = 1.0f;
+                _wood.scale = 0.3f;
+                _tractor.scale = 1.0f;
+                pauseMenu.scale = 0.5f;
+            }
+		}
+        else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            if (surface.width > 1024)
+            {
+                _woodchuckWalk.scale = 3.0f;
+                _woodchuckHit.scale = 3.0f;
+                _wood.scale = 1.5f;
+                _tractor.scale = 2.8f;
+            }
+            else
+            {
+                _woodchuckWalk.scale = 2.0f;
+                _woodchuckHit.scale = 2.0f;
+                _wood.scale = 1.0f;
+                _tractor.scale = 1.8f;
+            }
+        }
 
     }
     return self;
@@ -181,9 +212,9 @@
 - (void)sendWoodChuck
 {
     [[SimpleAudioEngine sharedEngine] playEffect:@"running.caf"];
-    [_woodchuckWalk runAction:[CCMoveTo actionWithDuration:4.0 position:ccp(ccpLerp(_woodchuckWalk.position, _wood.position, 1).x-50, 90)]];
+    [_woodchuckWalk runAction:[CCMoveTo actionWithDuration:4.0 position:ccp(ccpLerp(_woodchuckWalk.position, _wood.position, 1).x-80, winSize.height*0.20)]];
     [_woodchuckWalk setVisible:YES];
-    [_woodchuckHit runAction:[CCMoveTo actionWithDuration:4.0 position:ccp(ccpLerp(_woodchuckWalk.position, _wood.position, 1).x-50, 90)]];
+    [_woodchuckHit runAction:[CCMoveTo actionWithDuration:4.0 position:ccp(ccpLerp(_woodchuckWalk.position, _wood.position, 1).x-80, winSize.height*0.20)]];
     [_woodchuckHit setVisible:NO];
 }
 
@@ -191,7 +222,7 @@
 // START TRACTOR ROLLING
 - (void)sendTractor
 {
-    [_tractor runAction:[CCMoveTo actionWithDuration:20.0 position:ccp(winSize.width + _tractor.contentSize.width, 140)]];
+    [_tractor runAction:[CCMoveTo actionWithDuration:25.0 position:ccp(winSize.width + _tractor.contentSize.width, winSize.height*0.35)]];
 }
 
 // START TOUCH
@@ -239,16 +270,16 @@
 {
     return CGRectMake(_tractor.position.x - (_tractor.contentSize.width/2),
                       _tractor.position.y - (_tractor.contentSize.height/2),
-                      _tractor.contentSize.width-20, _tractor.contentSize.height);
+                      _tractor.contentSize.width, _tractor.contentSize.height);
 }
 
 
 // CHECK THE STATUS OF OUR SPRITES
 -(void) tick:(ccTime) dt {
     
-    NSLog(@"WOODCHUCK WALK POSITION: %f", (float)_woodchuckWalk.position.x);
+    //NSLog(@"WOODCHUCK WALK POSITION: %f", (float)_woodchuckWalk.position.x);
     
-    _bar.scaleX = (float) _woodchuckWalk.position.x;
+    _bar.scaleX = (float) _woodchuckWalk.position.x - _woodchuckWalk.contentSize.width/2;
 
     _playerRect = [self rectPlayer];
     _woodRect = [self rectWood];
@@ -258,7 +289,7 @@
     if (CGRectIntersectsRect(_playerRect, _woodRect))
     {
         [_woodchuckWalk setVisible:NO];
-        [_woodchuckHit setVisible:NO];
+        [_woodchuckHit setVisible:YES];
     }
     else
     {

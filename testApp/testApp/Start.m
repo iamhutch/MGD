@@ -27,18 +27,32 @@
 {
 	if( (self=[super init])) {
         winSize = [CCDirector sharedDirector].winSize;
+        surface = [CCDirector sharedDirector].winSizeInPixels;
         CCSprite *background;
 		
-		if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ) {
-            if (winSize.width < 480)
+		if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone )
+        {
+            if (surface.width > 480)
             {
-                background = [CCSprite spriteWithFile:@"start-hd.png"];
+                background = [CCSprite spriteWithFile:@"start_hd.png"];
             }
             else
             {
                 background = [CCSprite spriteWithFile:@"start.png"];
             }
 		}
+        else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            if (surface.width > 1024)
+            {
+                background = [CCSprite spriteWithFile:@"start_ipad_hd.png"];
+            }
+            else
+            {
+                background = [CCSprite spriteWithFile:@"start_ipad.png"];
+            }
+        }
+
 		background.position = ccp(winSize.width/2, winSize.height/2);
 		[self addChild: background];
         

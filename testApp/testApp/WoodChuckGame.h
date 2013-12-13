@@ -13,6 +13,7 @@
 
 @interface WoodChuckGame : CCLayer
 {
+    CGSize surface;
     CGSize winSize;
     CCSprite *_woodchuckWalk;
     CCSprite *_woodchuckHit;

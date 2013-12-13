@@ -12,6 +12,7 @@
 @interface Start : CCLayer
 {
     CGSize winSize;
+    CGSize surface;
 }
 
 +(CCScene *) scene;
