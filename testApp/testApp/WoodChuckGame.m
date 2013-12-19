@@ -31,11 +31,14 @@
 {
 	if( (self=[super init])) {
         
+        _woodCount = 0;
+        
         // SETUP AUDIO, WINDOW SIZE, BACKGROUND
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"crunch.caf"];
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"hit.caf"];
         winSize = [CCDirector sharedDirector].winSize;
         surface = [CCDirector sharedDirector].winSizeInPixels;
+        
         
         // BACKGROUND
         CCSprite *background;
@@ -92,7 +95,7 @@
         for (int i=0; i<=1; i++)
         {
             [walkingFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"woodchuck-walking0%d.png", i]]];
-            [collisionFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"woodchuck-hit0%d.png", i]]];
+            [collisionFrames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"woodchuck-eat0%d.png", i]]];
         }
         
         _woodchuckWalk = [CCSprite spriteWithSpriteFrameName:@"woodchuck-walking00.png"];
@@ -100,7 +103,7 @@
         [_woodchuckWalk setVisible:YES];
         [self addChild:_woodchuckWalk];
         
-        _woodchuckHit = [CCSprite spriteWithSpriteFrameName:@"woodchuck-hit00.png"];
+        _woodchuckHit = [CCSprite spriteWithSpriteFrameName:@"woodchuck-eat00.png"];
         _woodchuckHit.position = ccp(_woodchuckWalk.position.x, winSize.height*0.20);
         [_woodchuckHit setVisible:NO];
         [self addChild:_woodchuckHit];
@@ -222,7 +225,7 @@
 // START TRACTOR ROLLING
 - (void)sendTractor
 {
-    [_tractor runAction:[CCMoveTo actionWithDuration:25.0 position:ccp(winSize.width + _tractor.contentSize.width, winSize.height*0.35)]];
+    [_tractor runAction:[CCMoveTo actionWithDuration:20.0 position:ccp(winSize.width + _tractor.contentSize.width, winSize.height*0.35)]];
 }
 
 // START TOUCH
@@ -238,7 +241,12 @@
     // CHECK IF WOODCHUCK HAS MET UP WITH WOODPILE
     if (CGRectIntersectsRect(_playerRect, _woodRect))
     {
+        CCTexture2D *newTexture = [[CCTextureCache sharedTextureCache] addImage:[NSString stringWithFormat:@"wood-%d.png", _woodCount]];
         [[SimpleAudioEngine sharedEngine] playEffect:@"crunch.caf"];
+        _wood.texture = newTexture;
+        if (_woodCount < 9){
+            _woodCount++;
+        }
     }
     else
     {
@@ -247,6 +255,7 @@
     [_woodchuckWalk runAction: [CCMoveBy actionWithDuration:1 position:ccp(10,0)]];
     [_woodchuckHit runAction: [CCMoveBy actionWithDuration:1 position:ccp(10,0)]];
    
+    
 }
 
 // RETURN THE CGRECT OF OUR WOODCHUCK
@@ -262,7 +271,7 @@
 {
     return CGRectMake(_wood.position.x - (_wood.contentSize.width/2),
                       _wood.position.y - (_wood.contentSize.height/2),
-                      _wood.contentSize.width, _wood.contentSize.height);
+                      _wood.contentSize.width-80, _wood.contentSize.height);
 }
 
 // RETURN THE CGRECT OF THE FARMER'S TRACTOR
@@ -270,7 +279,7 @@
 {
     return CGRectMake(_tractor.position.x - (_tractor.contentSize.width/2),
                       _tractor.position.y - (_tractor.contentSize.height/2),
-                      _tractor.contentSize.width, _tractor.contentSize.height);
+                      _tractor.contentSize.width+20.0f, _tractor.contentSize.height);
 }
 
 
@@ -307,7 +316,7 @@
     }
     
     // IF WOODCHUCK IS SAFELY OFFSCREEN, TAKE US BACK TO START
-    if (_woodchuckWalk.position.x-50 > winSize.width) {
+    if (_woodchuckWalk.position.x > winSize.width) {
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[Start node] ]];
     }
     

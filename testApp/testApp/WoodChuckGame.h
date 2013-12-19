@@ -31,6 +31,7 @@
     BOOL woodchuckWalk;
     CCSprite *_bar;
     bool gamePause;
+    int _woodCount;
 }
 
 @property (nonatomic, strong) CCSprite *_woodchuckWalk;

@@ -8,6 +8,8 @@
 
 #import "Start.h"
 #import "WoodChuckGame.h"
+#import "Credits.h"
+#import "Help.h"
 
 @implementation Start
 
@@ -30,6 +32,7 @@
         surface = [CCDirector sharedDirector].winSizeInPixels;
         CCSprite *background;
 		
+        // SETUP BACKGROUND
 		if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone )
         {
             if (surface.width > 480)
@@ -53,30 +56,66 @@
             }
         }
 
-		background.position = ccp(winSize.width/2, winSize.height/2);
+		background.position = ccp(winSize.width/2.0f, winSize.height/2.0f);
 		[self addChild: background];
+
+        // SETUP MENUS WITH BLOCKS
+        CCMenuItemImage *startMenu = [CCMenuItemImage itemWithNormalImage:@"menu_start.png"
+                                                            selectedImage:nil
+                                                                    block:^(id sender)  {
+                                                                        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[WoodChuckGame node]]];
+                                                                    }
+                                      ];
+        startMenu.position = ccp(surface.width/4.0f, surface.height*0.40f);
+        startMenu.tag = 0;
+
+        CCMenuItemImage *helpMenu = [CCMenuItemImage itemWithNormalImage:@"menu_help.png"
+                                                            selectedImage:nil
+                                                                    block:^(id sender)  {
+                                                                        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[Help node]]];
+                                                                    }
+                                      ];
+        helpMenu.position = ccp(surface.width/4.0f, surface.height*0.27f);
+        helpMenu.tag = 1;
+
+        CCMenuItemImage *creditMenu = [CCMenuItemImage itemWithNormalImage:@"menu_credits.png"
+                                                           selectedImage:nil
+                                                                   block:^(id sender)  {
+                                                                       [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[Credits node]]];
+                                                                   }
+                                     ];
+        creditMenu.position = ccp(surface.width/4.0f, surface.height*0.15f);
+        creditMenu.tag = 2;
+
+        CCMenu *menuStart = [CCMenu menuWithItems:startMenu, helpMenu, creditMenu, nil];
+        menuStart.position = CGPointZero;
+        [self addChild:menuStart z:10];
+
         
-        CCLabelTTF *label = [CCLabelTTF labelWithString:@"Click to Start" fontName:@"Helvetica" fontSize:60];
-        label.color = ccc3(204,0,0);
-        label.position = ccp(winSize.width/2, winSize.height/2+100);
-        [self addChild:label];
-        
-        [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self
-                                                                  priority:0
-                                                           swallowsTouches:YES];
         
     }
     return self;
 }
 
-- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+
+- (void)menuButtonPressed:(CCMenuItem  *) menuItem
 {
-	return YES;
+    switch ((long)menuItem.tag) {
+        case 0:
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[WoodChuckGame node]]];
+            break;
+        case 1:
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[WoodChuckGame node]]];
+            break;
+        case 2:
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[Credits node]]];
+            break;
+            
+        default:
+            break;
+    }
 }
 
-- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[WoodChuckGame node]]];
-}
+
 
 @end

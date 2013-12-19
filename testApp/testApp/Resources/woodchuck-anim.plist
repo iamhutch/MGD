@@ -7,7 +7,7 @@
             <key>tractor-0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{121,110},{117,106}}</string>
+                <string>{{2,2},{117,106}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>tractor-1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,110},{117,106}}</string>
+                <string>{{121,2},{117,106}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>tractor-2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{121,2},{117,106}}</string>
+                <string>{{2,110},{117,106}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>tractor-3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{117,106}}</string>
+                <string>{{121,110},{117,106}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -56,14 +56,40 @@
                 <key>sourceSize</key>
                 <string>{117,106}</string>
             </dict>
-            <key>woodchuck-hit00.png</key>
+            <key>woodchuck-eat00.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{161,218},{39,51}}</string>
+                <string>{{2,218},{39,54}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{39,54}}</string>
+                <key>sourceSize</key>
+                <string>{39,54}</string>
+            </dict>
+            <key>woodchuck-eat01.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{43,218},{39,54}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{39,54}}</string>
+                <key>sourceSize</key>
+                <string>{39,54}</string>
+            </dict>
+            <key>woodchuck-hit00.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{84,218},{39,51}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{39,51}}</string>
                 <key>sourceSize</key>
@@ -72,11 +98,11 @@
             <key>woodchuck-hit01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{108,218},{39,51}}</string>
+                <string>{{125,218},{39,51}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{39,51}}</string>
                 <key>sourceSize</key>
@@ -85,11 +111,11 @@
             <key>woodchuck-walking00.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{55,218},{39,51}}</string>
+                <string>{{166,218},{39,51}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{39,51}}</string>
                 <key>sourceSize</key>
@@ -98,11 +124,11 @@
             <key>woodchuck-walking01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,218},{39,51}}</string>
+                <string>{{207,218},{39,51}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{39,51}}</string>
                 <key>sourceSize</key>
@@ -118,7 +144,7 @@
             <key>size</key>
             <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f96392bb73b65caafd7dcbfb9310b1c6:09e25827033d95c33f53f7823a3a31a8:b8d918090b3ab491d14767e14bbb106c$</string>
+            <string>$TexturePacker:SmartUpdate:60c6d8b95509f9cac4d0b01f18965b7f:c4773576c0c5647e7ad5361bed5879ad:b8d918090b3ab491d14767e14bbb106c$</string>
             <key>textureFileName</key>
             <string>woodchuck-anim.png</string>
         </dict>
