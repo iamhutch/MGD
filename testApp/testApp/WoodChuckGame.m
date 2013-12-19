@@ -216,7 +216,6 @@
 // START WOODCHUCK WALKING WITH LINEAR INTERPOLATION
 - (void)sendWoodChuck
 {
-    [[SimpleAudioEngine sharedEngine] playEffect:@"running.caf"];
     [_woodchuckWalk runAction:[CCMoveTo actionWithDuration:4.0 position:ccp(ccpLerp(_woodchuckWalk.position, _wood.position, 1).x-80, winSize.height*0.20)]];
     [_woodchuckWalk setVisible:YES];
     [_woodchuckHit runAction:[CCMoveTo actionWithDuration:4.0 position:ccp(ccpLerp(_woodchuckWalk.position, _wood.position, 1).x-80, winSize.height*0.20)]];
