@@ -200,6 +200,7 @@
     {
         [[CCDirector sharedDirector] stopAnimation];
         [[CCDirector sharedDirector] pause];
+        [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
         gamePause = YES;
     }
     else
@@ -207,6 +208,7 @@
         [[CCDirector sharedDirector] stopAnimation];
         [[CCDirector sharedDirector] resume];
         [[CCDirector sharedDirector] startAnimation];
+        [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
         gamePause = NO;
     }
 }
@@ -238,23 +240,23 @@
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
     
-    // CHECK IF WOODCHUCK HAS MET UP WITH WOODPILE
-    if (CGRectIntersectsRect(_playerRect, _woodRect))
+    // MAKE SURE WE ARE NOT IN PAUSE MODE
+    if (gamePause == NO)
     {
-        CCTexture2D *newTexture = [[CCTextureCache sharedTextureCache] addImage:[NSString stringWithFormat:@"wood-%d.png", _woodCount]];
-        [[SimpleAudioEngine sharedEngine] playEffect:@"crunch.caf"];
-        _wood.texture = newTexture;
-        if (_woodCount < 9){
-            _woodCount++;
+        // CHECK IF WOODCHUCK HAS MET UP WITH WOODPILE
+        if (CGRectIntersectsRect(_playerRect, _woodRect))
+        {
+            CCTexture2D *newTexture = [[CCTextureCache sharedTextureCache] addImage:[NSString stringWithFormat:@"wood-%d.png", _woodCount]];
+            [[SimpleAudioEngine sharedEngine] playEffect:@"crunch.caf"];
+            _wood.texture = newTexture;
+            if (_woodCount < 9){
+                _woodCount++;
+            }
         }
+        [_woodchuckWalk runAction: [CCMoveBy actionWithDuration:1 position:ccp(10,0)]];
+        [_woodchuckHit runAction: [CCMoveBy actionWithDuration:1 position:ccp(10,0)]];
     }
-    else
-    {
-        [[SimpleAudioEngine sharedEngine] playEffect:@"running.caf"];
-    }
-    [_woodchuckWalk runAction: [CCMoveBy actionWithDuration:1 position:ccp(10,0)]];
-    [_woodchuckHit runAction: [CCMoveBy actionWithDuration:1 position:ccp(10,0)]];
-   
+
     
 }
 
